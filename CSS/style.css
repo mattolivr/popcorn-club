@@ -1,13 +1,32 @@
+:root {
+    --main-primary: #30CCFE;
+    --main-secondary: #F29A31;
+    --main-background: #DBDBDB;
+    --main-border: #272727;
+}
+
 html, body {
     margin: 0;
 }
 
+h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
 .container_block{
-    background-color: #DBDBDB;
+    background-color: var(--main-background);
     margin: 0;
     padding: 8px;
 
     border-radius: 8px;
+}
+
+.container_divider{
+    width: 95%;
+    margin: 6px auto;
+    border: 2px solid var(--main-border);
+    border-radius: 4px;
 }
 
 #layout_container{
@@ -40,7 +59,7 @@ header{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    color: #F29A31;
+    color: var(--main-primary);
 }
 
 #header_search{
@@ -68,6 +87,67 @@ header{
 #user_container{
     grid-column-start: 2;
     grid-column-end: 2;
+}
+
+#user_container>div{
+    padding: 0;
+    border-radius: 8px;
+}
+
+#user_bg{
+    background-color: var(--main-primary);
+    border-radius: 8px 8px 0 0;
+    height: 70px;
+}
+
+#user_avatar{
+    background-color: var(--main-secondary);
+    border-radius: 100%;
+
+    width: 85px;
+    height: 85px;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
+#user_content_container{
+    padding: 8px;
+
+    /* transform: translateY(-50%); */
+}
+
+#user_dname, #user_name{
+    text-align: center;
+    margin: 0;
+}
+
+#user_dname{
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+#user_name{
+    font-weight: 400;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.user_club_container{
+    margin-bottom: 4px;
+}
+
+.user_club_container img{
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+}
+
+.user_club_container span{
+    font-weight: bold;
+}
+
+#user_dropdown_btn>svg{
+    margin: 0 auto;
 }
 
 main {
