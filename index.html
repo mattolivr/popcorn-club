@@ -46,7 +46,7 @@
                         <div id="user_avatar"></div>
                     </div>
                     <div id="user_content_container">
-                        <p id="user_dname">Usuário</p>
+                        <p id="user_dname">Nome do Usuário</p>
                         <p id="user_name">@username</p>
                         <hr class="container_divider">
                         <h2>Meus Clubes</h2>
@@ -68,7 +68,20 @@
                 </div>
             </div>
             <main>
-                <div id="main_create" class="container_block">Criar post</div>
+                <div id="main_create" class="container_block">
+                    <div id="main_create_avatar"></div>
+                    <input type="text" class="form-control" id="main_create_input" placeholder="Pensando em algo?">
+                    <div id="main_create_nav">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-image"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-film"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-music"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-chart-bar"></i></a></li>
+                        </ul>
+                    </div>
+                    <input type="submit" value="Enviar" id="main_create_submit" class="btn btn-secondary">
+                </div>
                 <div id="main_post" class="container_block">Postagem</div>
             </main>
             <div id="message_container">

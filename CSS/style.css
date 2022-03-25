@@ -1,6 +1,7 @@
 :root {
   --main-primary: #30ccfe;
   --main-secondary: #f29a31;
+  --main-secondary-hover: #db7d0e;
   --main-black: #474747;
 
   --main-background: #dbdbdb;
@@ -10,6 +11,25 @@
 html,
 body {
   margin: 0;
+}
+
+.btn-secondary {
+  background-color: var(--main-secondary);
+
+  border: 0;
+
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background-color: var(--main-secondary-hover);
+}
+
+.btn-secondary:focus {
+  background-color: var(--main-secondary-hover);
+  outline: none;
+  box-shadow: none;
 }
 
 h2 {
@@ -116,8 +136,6 @@ header {
 
   width: 85px;
   height: 85px;
-  /* transform: translateY(-50%); */
-  /* margin: 0 auto; */
 
   position: absolute;
   top: 28px;
@@ -125,7 +143,7 @@ header {
 }
 
 #user_content_container {
-  margin-top: 32px;
+  margin-top: 38px;
   padding: 8px 16px;
   display: flex;
   flex-direction: column;
@@ -176,6 +194,53 @@ main {
 
 main > div.container_block {
   margin-bottom: 12px;
+}
+
+#main_create {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main_create_avatar {
+  background-color: var(--main-secondary);
+  border-radius: 100%;
+
+  width: 64px !important;
+  height: 64px;
+  flex-basis: 64px;
+}
+
+#main_create_input {
+  height: 2.2rem;
+  flex-basis: calc(100% - 72px);
+}
+
+#main_create_nav {
+  justify-self: left;
+}
+
+#main_create_nav > ul {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  margin: 4px 0 0 4px;
+  padding: 0;
+}
+
+#main_create_nav ul li {
+  margin-right: 6px;
+}
+
+#main_create_nav i {
+  font-size: 1.4em;
+  color: var(--main-black);
+}
+
+#main_create_submit {
+  justify-self: end;
 }
 
 #message_container {
