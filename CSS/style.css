@@ -33,6 +33,11 @@ body {
   box-shadow: none;
 }
 
+.btn_drop {
+  display: grid;
+  justify-content: center;
+}
+
 h2 {
   text-align: center;
   font-size: 1.2em;
@@ -174,6 +179,25 @@ header {
   font-style: italic;
 }
 
+#user_badges {
+  margin: 6px auto;
+}
+
+#user_badges ul {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  margin: 4px 0 0 4px;
+  padding: 0;
+}
+
+#user_badges i {
+  font-size: 1.7em;
+  color: var(--main-black);
+  margin: 0 3px;
+}
+
 .user_club_container {
   margin-bottom: 4px;
 }
@@ -186,10 +210,6 @@ header {
 
 .user_club_container span {
   font-weight: bold;
-}
-
-#user_dropdown_btn {
-  align-self: center;
 }
 
 main {
