@@ -6,6 +6,7 @@
 
   --main-background: #dbdbdb;
   --main-border: #272727;
+  --main-border-darker: #141414;
 }
 
 html,
@@ -45,10 +46,17 @@ h2 {
   border-radius: 8px;
 }
 
-.container_divider {
+.hr1 {
   width: 100%;
   margin: 6px auto;
   border: 2px solid var(--main-border);
+  border-radius: 4px;
+}
+
+.hr2 {
+  width: 98%;
+  margin: 6px auto;
+  border: 1px solid var(--main-border-darker);
   border-radius: 4px;
 }
 
@@ -243,7 +251,48 @@ main > div.container_block {
   justify-self: end;
 }
 
-#message_container {
+aside {
   grid-column-start: 6;
   grid-column-end: 6;
+}
+
+.message_chats {
+  display: grid;
+  grid-template-columns: 64px 8px auto;
+  align-items: end;
+
+  margin-bottom: 6px;
+}
+
+.chat_avatar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.chat_avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.chat_username {
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* TODO: colocar ... depois */
+.chat_textprev {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  align-self: start;
+
+  max-width: 200px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
