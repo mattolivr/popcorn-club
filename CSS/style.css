@@ -18,6 +18,7 @@ body {
   background-color: var(--main-secondary);
 
   border: 0;
+  border-radius: 12px;
 
   font-weight: 600;
   text-transform: uppercase;
@@ -277,8 +278,89 @@ main > div.container_block {
   justify-self: end;
 }
 
-#main_post {
-  height: 150vh;
+.post_header {
+  display: grid;
+  grid-template-columns: 64px 8px auto;
+
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+.post_header_avatar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.post_header_avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.post_header_dname {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.post_header_username {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  align-self: start;
+}
+
+.post_body_text {
+  font-size: 1rem;
+}
+
+.post_feedback ul {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  margin: 0 0 6px 0;
+  padding: 0;
+}
+
+.post_feedback i,
+.post_feedback span {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.post_feedback i {
+  margin-right: 4px;
+}
+
+.post_feedback span {
+  margin-right: 8px;
+}
+
+.post_btns ul {
+  display: grid;
+  grid-template-columns: auto auto auto 64px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post_btns i {
+  flex-basis: auto;
+  font-size: 1.1em;
+}
+
+.post_btns button {
+  width: 95%;
 }
 
 aside {
@@ -330,4 +412,6 @@ aside {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
+
+  font-size: 1rem;
 }
